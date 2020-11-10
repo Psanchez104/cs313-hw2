@@ -6,6 +6,7 @@ struct Node {
 	Node* next;
 };
 
+//stack implementation
 class Stack {
 private:
 	int size;
@@ -68,12 +69,12 @@ bool Stack::isEmpty() {
 
 //list all elements in the stack... part a
 void Stack::print() {
-	if (isEmpty()) std::cout << "Stack is empty";
+	if (isEmpty()) std::cout << "Stack is empty"; //check if empty
 	else {
 		Node* temp;
 		temp = top;
 		while (temp != NULL) {
-			std::cout << temp->data << std::endl;
+			std::cout << temp->data << std::endl; //go through and print each of the node's data
 			temp = temp->next;
 		}
 	}
@@ -85,7 +86,7 @@ void Stack::change(int i, std::string s) {
 		std::cout << "Stack is empty";
 		return;
 	}
-	int counter = 0;
+	int counter = 0;//to check against input
 	Node* temp = top;
 	while (true) {
 		if (counter == i) {

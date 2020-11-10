@@ -74,7 +74,7 @@ int main() {
 	Stack myStack;
 
 	for (int i = 0; i < test.length(); i++) {
-		if (test[i] == ' ' || test[i] == ',' || test[i] == '.') {
+		if (test[i] == ' ' || test[i] == ',' || test[i] == '.') { //check for punctionuation or a space, then remove from the stack
 			while (!myStack.isEmpty()) {
 				output += myStack.pop();
 			}
@@ -82,7 +82,7 @@ int main() {
 			continue;
 		}
 		else {
-			myStack.push(test[i]);
+			myStack.push(test[i]);//push onto the stack
 		}
 	}
 
